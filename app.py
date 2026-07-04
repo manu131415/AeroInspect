@@ -21,19 +21,27 @@ import io
 # ============================================================
 # CONFIG - flip this switch once your model is trained
 # ============================================================
-USE_REAL_MODEL = False          # <-- set True after training finishes
+USE_REAL_MODEL = True         # <-- set True after training finishes
 MODEL_PATH = "best.pt"          # <-- path to your trained weights
 
-CLASS_NAMES = ["crack", "dent", "corrosion", "missing_fastener", "paint_damage", "fluid_leak"]
+# CLASS_NAMES = ["crack", "dent", "corrosion", "missing_fastener", "paint_damage", "fluid_leak"]
 
-# Severity rules: map defect type -> base severity
+# # Severity rules: map defect type -> base severity
+# SEVERITY_MAP = {
+#     "crack": "high",
+#     "missing_fastener": "high",
+#     "fluid_leak": "high",
+#     "corrosion": "medium",
+#     "dent": "medium",
+#     "paint_damage": "low",
+# }
+
+CLASS_NAMES = ["Dent", "Fastener Damage", "Rupture"]
+
 SEVERITY_MAP = {
-    "crack": "high",
-    "missing_fastener": "high",
-    "fluid_leak": "high",
-    "corrosion": "medium",
-    "dent": "medium",
-    "paint_damage": "low",
+    "Rupture": "high",
+    "Fastener Damage": "high",
+    "Dent": "medium",
 }
 
 SEVERITY_COLOR = {
