@@ -15,7 +15,7 @@ This project uses an edge-optimized object detection model to automatically dete
 ## Features
 
 - Real-time defect detection with bounding boxes and confidence scores
-- Six defect classes: `crack`, `dent`, `corrosion`, `missing_fastener`, `paint_damage`, `fluid_leak`
+- Three defect classes:  `dent`, `rupture`, `fastener_damage`
 - Automatic severity flagging (🔴 high / 🟡 medium / 🟢 low) to support inspection triage
 - Downloadable inspection report
 - Lightweight architecture designed for on-device / edge deployment (no cloud dependency required at inference time)
@@ -42,10 +42,10 @@ Trained on a public aircraft surface defect dataset (~9,352 images) sourced and 
 ## Model Performance
 
 _To be filled:_
-- mAP@50: `TBD`
-- Precision: `TBD`
-- Recall: `TBD`
-- Inference latency (edge, quantized): `TBD ms`
+- mAP@50: `0.7401408`
+- Precision: `0.795374`
+- Recall: `0.6705528`
+- Inference latency (edge, quantized): `3939.58312 ms`
 
 ## How It Works
 
